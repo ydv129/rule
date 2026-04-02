@@ -1,2 +1,0 @@
-# rule
-rules for llm
