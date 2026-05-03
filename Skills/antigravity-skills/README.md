@@ -27,6 +27,8 @@ python Skills/antigravity-skills/bin/install.py
 
 This automatically sets up all skills in your Antigravity skills directory (`~/.gemini/antigravity/skills/`). On Windows, files will be copied instead of symlinked due to permission restrictions - this is normal and works perfectly.
 
+**After installation, you can safely remove the cloned `rule` directory if you only need basic skill functionality. However, keep it if you want to use the automatic skill enhancer or update skills later.**
+
 ### 3. Start Using Skills
 
 Your Antigravity LLM now has access to all skills! Use them in two ways:
@@ -134,11 +136,20 @@ Add new skills by:
 3. Updating `Skills/antigravity-skills/config/skills_index.json` with metadata
 4. Running `python Skills/antigravity-skills/bin/install.py` to refresh
 
-## Requirements
+## After Installation
 
-- **Python 3.6+** - For running the setup and enhancement scripts
-- **Antigravity LLM** - The target AI assistant
-- **Git** - For cloning the repository
+### Keeping the Repository
+Keep the cloned `rule` directory if you want to:
+- Use the automatic skill enhancer: `python Skills/antigravity-skills/bin/apply_skill.py`
+- Update skills in the future by pulling latest changes
+- Add custom skills or modify existing ones
+
+### Removing the Repository
+You can safely remove the cloned `rule` directory after installation if you only need:
+- Basic skill functionality in Antigravity
+- Manual skill usage with `@skill-name` prompts
+
+**Note**: On Windows, skills are copied (not linked), so removing the source directory won't affect your installed skills.
 
 ## Windows Setup
 
