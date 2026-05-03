@@ -25,7 +25,7 @@ cd rule
 python Skills/antigravity-skills/bin/install.py
 ```
 
-This automatically sets up all skills in your Antigravity skills directory (`~/.gemini/antigravity/skills/`).
+This automatically sets up all skills in your Antigravity skills directory (`~/.gemini/antigravity/skills/`). On Windows, files will be copied instead of symlinked due to permission restrictions - this is normal and works perfectly.
 
 ### 3. Start Using Skills
 
@@ -169,6 +169,7 @@ echo "Help me design a poster" | python Skills/antigravity-skills/bin/apply_skil
 - Check skill descriptions in `config/skills_index.json`
 
 ### Permission Errors
+- On Windows, the installer will automatically copy files instead of creating symlinks (this is normal)
 - Ensure write access to `~/.gemini/antigravity/skills/`
 - Run with appropriate permissions if needed
 
