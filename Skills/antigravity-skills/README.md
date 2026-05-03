@@ -22,7 +22,7 @@ cd rule
 ### 2. Install Skills
 
 ```bash
-python bin/install.py
+python Skills/antigravity-skills/bin/install.py
 ```
 
 This automatically sets up all skills in your Antigravity skills directory (`~/.gemini/antigravity/skills/`).
@@ -35,7 +35,7 @@ Your Antigravity LLM now has access to all skills! Use them in two ways:
 Pipe your prompts through the skill enhancer:
 
 ```bash
-echo "Help me design a beautiful poster" | python bin/apply_skill.py
+echo "Help me design a beautiful poster" | python Skills/antigravity-skills/bin/apply_skill.py
 # Output: @canvas-design Help me design a beautiful poster
 ```
 
@@ -114,7 +114,7 @@ antigravity-skills/
 Process multiple prompts:
 
 ```bash
-cat prompts.txt | python bin/apply_skill.py
+cat prompts.txt | python Skills/antigravity-skills/bin/apply_skill.py
 ```
 
 ### Integration with Scripts
@@ -123,16 +123,16 @@ Use in your automation workflows:
 ```bash
 #!/bin/bash
 PROMPT="Build a React component for user authentication"
-ENHANCED=$(echo "$PROMPT" | python bin/apply_skill.py)
+ENHANCED=$(echo "$PROMPT" | python Skills/antigravity-skills/bin/apply_skill.py)
 # Use $ENHANCED in your Antigravity workflow
 ```
 
 ### Custom Skill Development
 Add new skills by:
-1. Creating a new directory in `skills/`
+1. Creating a new directory in `Skills/antigravity-skills/skills/`
 2. Adding a `SKILL.md` file with your skill definition
-3. Updating `config/skills_index.json` with metadata
-4. Running `python bin/install.py` to refresh
+3. Updating `Skills/antigravity-skills/config/skills_index.json` with metadata
+4. Running `python Skills/antigravity-skills/bin/install.py` to refresh
 
 ## Requirements
 
@@ -144,7 +144,7 @@ Add new skills by:
 
 ### Skills Not Loading
 1. Verify installation: `ls ~/.gemini/antigravity/skills/`
-2. Re-run setup: `python bin/install.py`
+2. Re-run setup: `python Skills/antigravity-skills/bin/install.py`
 3. Restart your Antigravity application
 
 ### Skill Not Detected
