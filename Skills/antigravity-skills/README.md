@@ -140,6 +140,22 @@ Add new skills by:
 - **Antigravity LLM** - The target AI assistant
 - **Git** - For cloning the repository
 
+## Windows Setup
+
+On Windows, use PowerShell or Command Prompt:
+
+```cmd
+git clone https://github.com/ydv129/rule.git
+cd rule
+python Skills/antigravity-skills/bin/install.py
+```
+
+For skill enhancement:
+
+```cmd
+echo "Help me design a poster" | python Skills/antigravity-skills/bin/apply_skill.py
+```
+
 ## Troubleshooting
 
 ### Skills Not Loading
